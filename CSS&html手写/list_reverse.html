@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul id='app'>
+  </ul>
+  <ul id='app1'>
+  </ul>
+  <script>
+    const el=document.getElementById('app')
+    const el1=document.getElementById('app1')
+    for(let i=0;i<5;i++){
+      let li=document.createElement('li')
+      li.innerText=i+1
+      el.appendChild(li)
+    }
+    //事件点击
+    el.addEventListener('click',(e)=>{alert(e.target.innerText)})
+    //治逆
+    let str=''
+    for(let i=0;i<el.children.length;i++){
+      str +='<li>'+el.children[el.children.length-1-i].innerText+'</li>'
+    }
+    el1.innerHTML=str
+  </script>
+</body>
+</html>
